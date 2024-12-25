@@ -39,7 +39,7 @@
         }
         .profile {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* 텍스트 위로 올리기 */
             margin-bottom: 20px;
         }
         .profile img {
@@ -47,10 +47,11 @@
             max-width: 350px; /* 이미지 크기 최대값 설정 */
             max-height: 350px; /* 이미지 크기 최대값 설정 */
             object-fit: cover; /* 이미지 비율 유지하면서 크기 맞춤 */
-            margin-right: 20px;
+            margin-right: 5px;
         }
         .profile h1 {
             margin: 0;
+            margin-top: -10px; /* 텍스트 위로 올리기 */
         }
         .details p {
             margin: 5px 0;
@@ -72,4 +73,8 @@
             <div>
                 <h1>홍길동</h1>
                 <p>Software Engineer | AI Researcher</p>
-            </
+            </div>
+        </div>
+    </div>
+</body>
+</html>
