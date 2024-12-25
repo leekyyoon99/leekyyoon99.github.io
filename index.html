@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             display: flex;
+            flex-direction: column; /* 모바일에서도 정렬이 어긋나지 않도록 변경 */
         }
         .sidebar {
             width: 200px;
@@ -34,28 +35,51 @@
             background-color: #ddd;
         }
         .content {
-            margin-left: 250px; /* 기존 220px에서 30px 더 추가 */
+            margin-left: 220px; /* 데스크톱 기준으로 여백 */
             padding: 20px;
+            flex: 1;
         }
         .profile {
             display: flex;
-            align-items: flex-start; /* 텍스트 위로 올리기 */
+            align-items: flex-start;
             margin-bottom: 20px;
+            flex-wrap: wrap; /* 모바일에서도 요소가 자동으로 줄바꿈 */
         }
         .profile img {
             border-radius: 0%;
-            max-width: 450px; /* 이미지 크기 최대값 설정 */
-            max-height: 450px; /* 이미지 크기 최대값 설정 */
-            object-fit: cover; /* 이미지 비율 유지하면서 크기 맞춤 */
-            margin-right: 5px;
+            max-width: 100%; /* 모바일 화면에서 가로폭 제한 */
+            height: auto; /* 높이를 자동으로 조정 */
+            margin-bottom: 10px; /* 모바일에서 이미지 아래 여백 */
         }
         .profile h1 {
             margin: 0;
-            margin-left: 20;
-            margin-top: -5px; /* 텍스트 위로 올리기 */
+            margin-top: -10px; /* 텍스트 위로 올리기 */
         }
         .details p {
             margin: 5px 0;
+        }
+
+        /* 미디어 쿼리: 화면 너비가 768px 이하인 경우 */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%; /* 사이드바를 화면 전체로 확장 */
+                height: auto;
+                position: relative;
+                box-shadow: none;
+            }
+            .content {
+                margin-left: 0; /* 모바일에서 여백 제거 */
+            }
+            .profile {
+                flex-direction: column; /* 모바일에서는 세로 정렬 */
+                align-items: center; /* 중앙 정렬 */
+            }
+            .profile img {
+                margin-right: 0; /* 이미지 우측 여백 제거 */
+            }
+            .profile h1 {
+                margin-top: 0; /* 추가적인 여백 제거 */
+            }
         }
     </style>
 </head>
