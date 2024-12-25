@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 블로그</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            height: 100vh;
+            position: fixed;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .profile h1 {
+            margin: 0;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 왼쪽 사이드바 -->
+    <div class="sidebar">
+        <h2>카테고리</h2>
+        <a href="undergraduate/index.html">Undergraduate</a>
+        <a href="master-course/index.html">Master-course</a>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+    <div class="content">
+        <div class="profile">
+            <img src="profile.jpg" alt="프로필 사진">
+            <div>
+                <h1>홍길동</h1>
+                <p>Software Engineer | AI Researcher</p>
+            </div>
+        </div>
+        <div class="details">
+            <h2>학력</h2>
+            <p>⚡ 학사: OO대학교 컴퓨터공학과</p>
+            <p>⚡ 석사: OO대학교 인공지능학과</p>
+
+            <h2>경력</h2>
+            <p>⚡ ABC 회사 (2021~현재): AI Engineer</p>
+            <p>⚡ XYZ 회사 (2018~2021): Software Developer</p>
+        </div>
+    </div>
+</body>
+</html>
