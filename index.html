@@ -44,8 +44,9 @@
         }
         .profile img {
             border-radius: 50%;
-            width: 150px; /* 기존 100px에서 크기 증가 */
-            height: 150px; /* 기존 100px에서 크기 증가 */
+            max-width: 150px; /* 이미지 크기 최대값 설정 */
+            max-height: 150px; /* 이미지 크기 최대값 설정 */
+            object-fit: cover; /* 이미지 비율 유지하면서 크기 맞춤 */
             margin-right: 20px;
         }
         .profile h1 {
@@ -71,17 +72,4 @@
             <div>
                 <h1>홍길동</h1>
                 <p>Software Engineer | AI Researcher</p>
-            </div>
-        </div>
-        <div class="details">
-            <h2>학력</h2>
-            <p>⚡ 학사: OO대학교 컴퓨터공학과</p>
-            <p>⚡ 석사: OO대학교 인공지능학과</p>
-
-            <h2>경력</h2>
-            <p>⚡ ABC 회사 (2021~현재): AI Engineer</p>
-            <p>⚡ XYZ 회사 (2018~2021): Software Developer</p>
-        </div>
-    </div>
-</body>
-</html>
+            </
