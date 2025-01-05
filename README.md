@@ -1,6 +1,6 @@
-# Devfolio
+# Leekyyoon
 
-![Preview](https://user-images.githubusercontent.com/9112801/96329524-c8906600-101b-11eb-8fd8-4d45e7f0cd1b.jpg)
+<img src="Profile.jpg" alt="이미지 설명" width="360" height="480">
 
 Devfolio is a modern and production-ready personal portfolio and blog template built on GatsbyJS and styled with TailwindCSS. Easily show off your projects, experience, and skills, as well as write blog posts showcasing your knowledge.
 
