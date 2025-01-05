@@ -1,226 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Portfolio Website</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflux Me</title>
     <style>
-      /* Reset */
-      body, h1, h2, h3, p, ul, li, a, button {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f4f4f4;
-        color: #333;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      ul {
-        list-style: none;
-      }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
 
-      /* Layout */
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 20px;
-      }
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #8a3f47;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            height: 100vh;
+            position: fixed;
+        }
 
-      header {
-        background: #333;
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-      }
-      header h1 {
-        font-size: 2.5em;
-      }
+        .sidebar h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+        }
 
-      nav {
-        background: #444;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-      }
-      nav ul {
-        display: flex;
-      }
-      nav ul li {
-        margin: 0 15px;
-      }
-      nav ul li a:hover {
-        color: #00bcd4;
-      }
+        .sidebar p {
+            margin: 5px 0;
+            font-size: 14px;
+            text-align: center;
+        }
 
-      section {
-        padding: 40px 20px;
-      }
-      section h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 2em;
-      }
-      section p {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            width: 100%;
+        }
 
-      .about {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+        .sidebar nav ul li {
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
 
-      .services {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-      .service-item {
-        flex: 1 1 calc(33% - 40px);
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        text-align: center;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+        .sidebar nav ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
 
-      .portfolio {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-      .portfolio-item {
-        flex: 1 1 calc(33% - 40px);
-        position: relative;
-      }
-      .portfolio-item img {
-        width: 100%;
-        border-radius: 5px;
-      }
-      .portfolio-item .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        border-radius: 5px;
-      }
-      .portfolio-item:hover .overlay {
-        opacity: 1;
-      }
-      .portfolio-item .overlay a {
-        color: #fff;
-        font-size: 1.5em;
-      }
+        .sidebar nav ul li a:hover {
+            background-color: #6d3239;
+        }
 
-      .contact form {
-        max-width: 600px;
-        margin: 0 auto;
-        background: #fff;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .contact form input, .contact form textarea, .contact form button {
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-      .contact form button {
-        background: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
+        .sidebar .social-icons {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .sidebar .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .sidebar .copyright {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        /* Main Content Styles */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            background: #2c2f33;
+            color: white;
+            min-height: 100vh;
+            flex: 1;
+        }
+
+        .content h2 {
+            margin-top: 0;
+        }
+
+        .content .section {
+            margin-bottom: 20px;
+            background: #3d4147;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .content .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .content .section h3 {
+            margin-top: 0;
+        }
+
+        .content .section p {
+            margin: 10px 0;
+        }
+
+        .content .section a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #8a3f47;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        .content .section a:hover {
+            background-color: #6d3239;
+        }
     </style>
-  </head>
-  <body>
-    <header>
-      <h1>My Portfolio</h1>
-    </header>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Reflux Me</h1>
+        <p>Web Designer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">What I'm good at</a></li>
+                <li><a href="#work">My Work</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="#">FB</a>
+            <a href="#">TW</a>
+            <a href="#">LI</a>
+        </div>
+        <div class="copyright">
+            &copy; 2019 Reflux Design
+        </div>
+    </div>
 
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="content">
+        <h2 id="about">About Me</h2>
+        <div class="section">
+            <img src="https://via.placeholder.com/600x300" alt="Sample">
+            <h3>Reflux HTML CSS Template</h3>
+            <p>
+                Donec tristique feugiat lacus, at sollicitudin nunc euismod sed. Mauris viverra, erat non sagittis gravida,
+                elit dui mollis ante, sit amet eleifend purus ligula eget eros.
+            </p>
+            <a href="#">Read More</a>
+        </div>
 
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>Hello! I'm a passionate web designer and developer, creating responsive and dynamic websites.</p>
-      </div>
-    </section>
-
-    <section id="services" class="services">
-      <div class="container">
-        <h2>My Services</h2>
-        <div class="service-item">
-          <h3>Web Design</h3>
-          <p>Creating visually appealing and user-friendly designs.</p>
+        <div class="section">
+            <img src="https://via.placeholder.com/600x300" alt="Sample">
+            <h3>Sed sagittis rhoncus velit</h3>
+            <p>
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                Vestibulum fermentum eleifend nibh, vitae sodales elit finibus pretium.
+            </p>
+            <a href="#">Read More</a>
         </div>
-        <div class="service-item">
-          <h3>Web Development</h3>
-          <p>Building responsive and dynamic websites using the latest technologies.</p>
-        </div>
-        <div class="service-item">
-          <h3>SEO Optimization</h3>
-          <p>Improving your website's visibility on search engines.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <h2>My Portfolio</h2>
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/300" alt="Project 1" />
-          <div class="overlay"><a href="#">View</a></div>
-        </div>
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/300" alt="Project 2" />
-          <div class="overlay"><a href="#">View</a></div>
-        </div>
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/300" alt="Project 3" />
-          <div class="overlay"><a href="#">View</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </section>
-  </body>
+    </div>
+</body>
 </html>
