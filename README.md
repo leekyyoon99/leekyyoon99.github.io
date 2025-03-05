@@ -141,7 +141,7 @@ Next, click **New Site From Git** and click **GitHub** (or another) as the provi
 
 After that, select the repository where you cloned this into. If you don't see it, you may need to configure the Netlify App on Github via the link they provide.
 
-![Netlify Step 2](https://user-images.githubusercontent.com/9112801/96353255-4bef9d00-1098-11eb-88ba-1ae7a4cec8d3.png)
+
 
 Finally, ensure that it set the _Basic Build Settings_ correctly. You want to ensure that the **Build Command** is set to `gatsby build` and the **Publish Directory** is set to `public/`. Once complete, click **Deploy Site** and you should be good to go!
 
